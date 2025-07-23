@@ -8,3 +8,5 @@ data.zip
 EDA.ipynb
 config.yaml
 *.ipynb
+*.txt
+*.xlsx
