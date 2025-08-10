@@ -2,6 +2,7 @@ data/
 make_data/
 runs/
 submit/
+images/
 __pycache__/
 
 data.zip
