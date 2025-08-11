@@ -40,9 +40,9 @@ class LabelSmoothingCrossEntropy(nn.Module):
         self.smoothing = smoothing
 
     def forward(self, input, target):
-        log_probs = F.log_softmax(input, dim=-1)
-        n_classes = input.size(-1)
-        true_dist = torch.zeros_like(log_probs)
-        true_dist.fill_(self.smoothing / (n_classes - 1))
-        true_dist.scatter_(1, target.unsqueeze(1), 1.0 - self.smoothing)
-        return torch.mean(torch.sum(-true_dist * log_probs, dim=-1))
+        log_probs = F.log_softmax(input, dim=-1) # softmax 연산 후 로그 계산
+        n_classes = input.size(-1) # 전체 클래스 갯수
+        true_dist = torch.zeros_like(log_probs) # 생성할 smoothing을 적용할 분포틀
+        true_dist.fill_(self.smoothing / (n_classes - 1)) # 정답을 제외한 나머지 클래스 확률 합(0.1)을 분배
+        true_dist.scatter_(1, target.unsqueeze(1), 1.0 - self.smoothing) # 정답 위치에 나머지 확률 적용
+        return torch.mean(torch.sum(-true_dist * log_probs, dim=-1)) # CrossEntropy 계산식
