@@ -13,8 +13,8 @@ def get_weighted_cross_entropy_loss(df: pd.DataFrame, label_column: str):
     class_counts = value_counts.tolist()
     # 2. 클래스별 가중치 계산 (샘플 수가 적을수록 가중치 높게)
     total = sum(class_counts)
-    weights = [total / c for c in class_counts]
-    norm_weights = [w / sum(weights) for w in weights]
+    weights = [total / c for c in class_counts] 
+    norm_weights = [w / sum(weights) for w in weights] # 1-(sample/sum(samples))
     # 3. Tensor로 변환 후 Loss 반환
     class_weights = torch.tensor(norm_weights, dtype=torch.float32)
     return nn.CrossEntropyLoss(weight=class_weights)
