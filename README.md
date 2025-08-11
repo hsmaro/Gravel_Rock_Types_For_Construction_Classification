@@ -1,5 +1,5 @@
 # 건설용 자갈 암석 종류 분류 AI 경진대회
->**월간 데이콘 × 한국지능정보사회진흥원(NIA)**[https://dacon.io/competitions/official/236471/overview/description]
+>[**월간 데이콘 × 한국지능정보사회진흥원(NIA)**](https://dacon.io/competitions/official/236471/overview/description)
 ## 📌배경
 - 자갈의 암석 종류는 콘크리트와 아스팔트의 강도, 내구성, 품질에 직접적인 영향을 미치기 때문에, 이를 정확히 구분하는 작업은 매우 중요합니다.
 - 현재는 대부분의 품질 검사가 수작업으로 이루어지고 있어 시간과 비용이 많이 소요되며, 검사자의 숙련도에 따라 정확도 차이가 발생할 수 있습니다.
