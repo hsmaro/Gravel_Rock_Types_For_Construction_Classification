@@ -37,7 +37,7 @@
     - 2025년 5월 8일 ~ 2025년 5월 30일까지 참여
 - 데이터 상세
     - 암석의 종류는 기타 포함 7가지, 불균형 데이터
-    ![alt text](images/label.jpg)
+    ![](https://github.com/hsmaro/Gravel_Rock_Types_For_Construction_Classification/blob/main/images/label.JPG)
 - 데이터 전처리
     - PadSquare 사용으로 암석 사진을 동일한 여백을 주며 정사각형으로 전처리
 
